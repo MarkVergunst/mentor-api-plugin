@@ -10,15 +10,19 @@ Dit is een **plug-and-play plugin** die WordPress integreert met Mentor-cursusse
 
 ## Installatie
 
-Volg de onderstaande stappen om de plugin te installeren:
+### Stap 1: Download de Plugin
 
-1. **Download de plugin:**
-   - Zip de `mentor-api-plugin` directory.
+In plaats van de bronbestanden te gebruiken, raden we aan de **laatste stabiele versie** van de plugin te downloaden via de [releases pagina](https://github.com/[your-repo]/releases). Daar vind je een kant-en-klare `.zip`-bestand dat eenvoudig geïnstalleerd kan worden.
+
+1. **Download de laatste release:**
+   - Ga naar de [releases pagina](https://github.com/MarkVergunst/mentor-api-plugin/releases).
+   - Download de nieuwste versie van de plugin (`mentor-api-plugin.zip`).
+   - (Optioneel) Hernoem deze naar `mentor-api-plugin.zip`
 
 2. **Upload de plugin:**
    - Ga naar je WordPress admin panel.
    - Navigeer naar `Plugins > Nieuwe Plugin > Plugin Uploaden`.
-   - Upload het zip-bestand dat je zojuist hebt gemaakt.
+   - Upload het zojuist gedownloade `.zip`-bestand.
 
 3. **Activeer de plugin:**
    - Nadat de upload is voltooid, klik op 'Activeer Plugin'.
@@ -29,7 +33,7 @@ Na activatie moet je enkele instellingen configureren:
 
 1. Ga naar `Instellingen > Mentor Courses and Categories`.
 2. Voer de volgende gegevens in:
-   - **API-URL:** De URL van je Django API.
+   - **API-URL:** De URL van je Mentor API.
 3. Klik op 'Opslaan' om de configuratie op te slaan.
 
 ## Gebruik
@@ -37,20 +41,20 @@ Na activatie moet je enkele instellingen configureren:
 Je kunt de plugin eenvoudig gebruiken door de shortcodes in je berichten of pagina's te plaatsen:
 
 - Toon alle categorieën:  
-  ```[django_categories]```
+  ```[mentor_categories]```
 
 - Toon een lijst met cursussen:  
-  ```[django_courses]```
+  ```[mentor_courses]```
 
-Deze shortcodes halen dynamisch de gegevens op van je Django API en tonen ze in WordPress.
+Deze shortcodes halen dynamisch de gegevens op van je Mentor API en tonen ze in WordPress.
 
 ## Ontwikkeling
 
-Als je aanpassingen wilt maken of de stijl van de plugin wilt wijzigen, kun je gebruik maken van **Tailwind CSS**. 
+Als je aanpassingen wilt maken of de stijl van de plugin wilt wijzigen, kun je gebruik maken van **Tailwind CSS**.
 
 ### Stappen om te ontwikkelen:
 
 1. Zorg ervoor dat je Node.js geïnstalleerd hebt.
 2. Gebruik de volgende Tailwind command-line om de stijlen in de gaten te houden en te compileren:
    ```bash
-   npx tailwindcss -i ./styles.css -o ./output.css --watch
+   npx tailwindcss -i ./styles.css -o
